@@ -1,0 +1,137 @@
+#root {
+  height: 100vh;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+
+  background-image: url("../../../img/black-and-white-photography-of-sand-2387819.jpg");
+
+  overflow-y: hidden;
+}
+
+@media all and (max-width: 500px) {
+  #root {
+    background-size: 200% 100%;
+  }
+  .main_s {
+    width: 100% !important;
+    border-radius: 0;
+  }
+  .main_s .form_sig {
+    width: 90% !important;
+  }
+  .main_s .form_sig .other * {
+    width: 100%;
+  }
+  .main_s .form_sig .T {
+    display: flex;
+    flex-direction: column;
+  }
+  .main_s .form_sig .T > .form-group {
+    margin-left: 0px !important;
+
+    flex: 1;
+  }
+  .main_s .form_sig .form-group label {
+    align-self: center;
+    font-weight: bolder;
+    color: #eb6d00 !important;
+  }
+  .main_s .form_sig .form-group input {
+    border-radius: 11rem;
+    background-color: #191919 !important;
+    color: #eb6d00 !important;
+  }
+}
+
+.main_s {
+  margin-top: auto;
+  margin-bottom: auto;
+
+  /* background: aqua; */
+  height: 83vh;
+  width: 52vw;
+  overflow-y: hidden;
+
+  border-radius: 11px;
+
+  padding: 10px;
+
+  backdrop-filter: blur(2px);
+
+  box-shadow: 10px 5px 5px 10px rgba(0, 0, 0, 0.5),
+    -10px -5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* form */
+.main_s .form_sig {
+  margin: auto;
+
+  height: 100%;
+  width: 100%;
+
+  overflow-y: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* .T */
+.main_s .form_sig .T {
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+.main_s .form_sig .T > .form-group {
+  margin-left: 20px;
+  width: 100%;
+}
+
+.main_s .form_sig .form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main_s .form_sig .form-group label {
+  align-self: center;
+  font-weight: bolder;
+  color: #eb6d00;
+}
+.main_s .form_sig .form-group input {
+  border-radius: 11rem;
+  background-color: #1e1e1e !important;
+  color: #2e8fa2 !important;
+  height: 34px;
+  padding: 3px;
+  border: 0;
+  text-align: center;
+}
+
+.main_s .form_sig > .form-group .invalid-feedback > p {
+  margin: 0px;
+  font-weight: bolder;
+}
+.main_s .form_sig .T > .form-group .invalid-feedback > p {
+  margin: 0px;
+  font-weight: bolder;
+}
+.main_s .form_sig .other {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 43px;
+  margin-bottom: 14px;
+}
+
+.main_s .form_sig .other #posts {
+  border-radius: 7%;
+  background-color: #1e1e1e;
+  border: 1px wheat solid;
+  color: wheat;
+  font-weight: bold;
+  height: 31px;
+  width: 83px;
+  padding: 0;
+}

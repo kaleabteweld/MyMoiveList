@@ -1,0 +1,132 @@
+#root {
+  height: 100vh;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+
+  background-image: url("../../../img/black-and-white-photography-of-sand-2387819.jpg");
+}
+
+.main {
+  margin-top: auto;
+  margin-bottom: auto;
+
+  /* background: aqua; */
+  height: 46vh !important;
+  width: 46vw;
+  overflow-y: hidden;
+
+  border-radius: 11px;
+
+  padding: 10px;
+
+  backdrop-filter: blur(2px);
+
+  box-shadow: 10px 5px 5px 10px rgba(0, 0, 0, 0.5),
+    -10px -5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+@media all and (max-width: 500px) {
+  root {
+    background-size: 200% 100%;
+  }
+  .main {
+    width: 100% !important;
+    border-radius: 0;
+  }
+  .main .form_sig .other * {
+    width: 100%;
+    margin-left: 0 !important ;
+    margin-right: 0 !important;
+  }
+}
+
+/* form */
+.main .form_sig {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.main .form_sig .form-group {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 90%;
+}
+.main .form_sig .form-group label {
+  align-self: center;
+  font-weight: bolder;
+  color: #eb6d00;
+}
+.main .form_sig .form-group input {
+  border-radius: 11rem;
+  background-color: #1e1e1e !important;
+  color: #2e8fa2 !important;
+  height: 34px;
+  padding: 3px;
+  border: 0;
+  text-align: center;
+}
+
+.main .form_sig button {
+  border-radius: 11rem;
+  margin: 10px;
+}
+.main .form_sig a {
+  border-radius: 11rem;
+  margin: 10px;
+}
+
+.main #other {
+  display: flex;
+  justify-content: space-evenly;
+
+  margin-top: auto;
+  margin-bottom: 25px;
+}
+
+/* other */
+
+.main .form_sig > .form-group .invalid-feedback > p {
+  margin: 0px;
+  font-weight: bolder;
+}
+.main .form_sig .T > .form-group .invalid-feedback > p {
+  margin: 0px;
+  font-weight: bolder;
+}
+
+.main .form_sig .other {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 14px;
+}
+
+.main .form_sig .other #posts {
+  border-radius: 7%;
+  background-color: #1e1e1e;
+  border: 1px wheat solid;
+  color: wheat;
+  font-weight: bold;
+  height: 31px;
+  width: 83px;
+}
+
+.main .form_sig .other a[href="/signIn"] {
+  border-radius: 7%;
+  background-color: wheat;
+  border: 0;
+  color: #1e1e1e;
+  font-weight: bold;
+  height: 31px;
+  width: 83px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* .main .form_sig .other > * {
+  border-radius: 0px !important;
+} */
