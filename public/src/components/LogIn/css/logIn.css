@@ -1,4 +1,4 @@
-#root {
+.sub_root {
   height: 100vh;
   margin: 0;
 
@@ -7,8 +7,9 @@
 
   background-image: url("../../../img/black-and-white-photography-of-sand-2387819.jpg");
 }
-
 .main {
+  margin: auto;
+
   margin-top: auto;
   margin-bottom: auto;
 
@@ -113,6 +114,7 @@
   font-weight: bold;
   height: 31px;
   width: 83px;
+  padding: 0;
 }
 
 .main .form_sig .other a[href="/signIn"] {
@@ -125,6 +127,7 @@
   width: 83px;
   text-align: center;
   text-decoration: none;
+  padding: 0;
 }
 
 /* .main .form_sig .other > * {

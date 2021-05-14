@@ -1,0 +1,58 @@
+body {
+  background-color: #383d43 !important;
+  background-size: 100% 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .head .back {
+    background-size: 100% 137% !important;
+  }
+  .head .mask p {
+    width: 90% !important;
+    font-size: 26px !important;
+  }
+}
+
+.head {
+  height: 100vh;
+  width: 100%;
+
+  position: relative;
+}
+.head .back {
+  height: 100%;
+  width: 100%;
+
+  background-image: url("https://www2.solarmovie.to/images/body-search.jpg");
+  background-size: 100% 100%;
+}
+.head .mask {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+
+  position: absolute;
+
+  left: 0;
+  display: flex;
+
+  /* background-color: rgba(1, 1, 1, 0.7); */
+}
+.head .mask p {
+  width: fit-content;
+  margin: auto;
+  border: 2px solid #242f3f;
+  padding: 38px;
+  color: #242f3f;
+  font-size: 41px;
+  font-weight: bold;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #007dff;
+  border-radius: 11rem;
+  height: 10px !important;
+}

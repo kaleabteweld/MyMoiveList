@@ -1,0 +1,60 @@
+.navbar {
+  background-color: #383d43;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar .navbar-collapse .navbar-nav .nav-item > button {
+    width: 100% !important;
+    border: 0 !important;
+  }
+  .navbar .navbar-collapse .navbar-nav {
+    margin: auto !important;
+  }
+}
+
+.navbar .navbar-collapse .navbar-nav .nav-item > button {
+  margin: auto;
+  background-color: transparent;
+  border: 2px solid #c1674b;
+  border-radius: 11rem;
+  color: #c1674b;
+  padding: 7px 11px 8px 12px;
+  /* height: 40px; */
+}
+.navbar .navbar-collapse .navbar-nav .nav-item.accou {
+  margin-right: 10px;
+}
+.navbar .navbar-collapse .navbar-nav .nav-item > button:hover {
+  background-color: #c1674b;
+  color: white;
+  font-weight: bolder;
+}
+.navbar .navbar-collapse .navbar-nav {
+  width: 50%;
+  margin-right: 30px;
+}
+.navbar .navbar-collapse .navbar-nav .nav-item {
+  margin: auto;
+}
+.navbar #icon {
+  height: 40px;
+  width: 40px;
+}
+.navbar #name {
+  height: fit-content;
+  margin: 0 !important;
+  margin-left: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #ff00fc;
+  font-size: 27px;
+  font-weight: bolder;
+}
+.navbar #accou {
+  background: transparent;
+  border: 0;
+}
+.navbar #accout {
+  height: 40px;
+  width: 40px;
+}

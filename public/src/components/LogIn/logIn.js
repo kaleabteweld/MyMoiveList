@@ -22,14 +22,14 @@ function LogIn() {
   // input
   var input_ele = {
     email: useRef(),
-    pass: useRef(),
+    password: useRef(),
   };
   let emailCh = (event) => {
     let target = $(input_ele["email"].target);
     setemail(target.val());
   };
   let passCh = (event) => {
-    let target = $(input_ele["pass"].target);
+    let target = $(input_ele["password"].target);
     setepass(target.val());
   };
 
@@ -38,7 +38,7 @@ function LogIn() {
     event.preventDefault();
     let data = {
       email: $(input_ele["email"].current).val(),
-      password: $(input_ele["pass"].current).val(),
+      password: $(input_ele["password"].current).val(),
     };
 
     axios
@@ -53,51 +53,42 @@ function LogIn() {
         localStorage.setItem("auth-token", response.headers["x-auth-token"]);
 
         // set user Data to conxet
-
-        // setUserState({
-        //   ...userState,
-
-        // })
-
+        setUserState({
+          ...response.data,
+          logIn_state: true,
+        });
         // logIn done go back to home
         setRedirect("home");
-
-        // get user data
-        // axios
-        //   .get("http://localhost:4000/api/users/me", {
-        //     headers: { "x-auth-token": response.headers["x-auth-token"] },
-        //   })
-        //   .then(function (response) {
-        //     dispatch(
-        //       log_in_ac({
-        //         data: response.data,
-        //         token: localStorage.getItem("auth-token"),
-        //       })
-        //     );
-        //   });
-
-        //setauth_state_st(true);
       })
       .catch((error) => {
+        var error = error.response.data;
         console.log(error.response);
         $(".main .form_sig .form-group input.is-invalid").removeClass(
           "is-invalid"
         );
-        if (error.response !== undefined) {
-          if (error.response.data.error_type === "joi") {
-            console.log(input_ele[error.response.data.error]);
-            error.response.data.error.map((err) => {
-              console.log(err.context.key);
-              $(input_ele[err.context.key].current).addClass("is-invalid");
-              $(input_ele[err.path].current)
-                .siblings(".invalid-feedback")
-                .text(err.message);
-            });
-          }
-          if (error.response.data.error_type === "mongoose") {
-            alert(error.response.data.error);
-            $(".main .form_sig .form-group input").val("");
-          }
+        if (error.error_type === "user") {
+          $(input_ele["email"].current).addClass("is-invalid");
+          $(input_ele["email"].current)
+            .siblings(".invalid-feedback")
+            .text(error.error);
+
+          $(input_ele["password"].current).addClass("is-invalid");
+          $(input_ele["password"].current)
+            .siblings(".invalid-feedback")
+            .text(error.error);
+        } else if (
+          error.error_level === "Validation" &&
+          error.error.error_type === "joi"
+        ) {
+          error.error.errors.map((joi_error) => {
+            let key = joi_error.context.key;
+            let message = joi_error.message;
+
+            $(input_ele[key].current).addClass("is-invalid");
+            $(input_ele[key].current)
+              .siblings(".invalid-feedback")
+              .text(message);
+          });
         }
       });
   };
@@ -109,57 +100,59 @@ function LogIn() {
     return <Redirect to="/signIn" />;
   } else {
     return (
-      <div className="main">
-        <form className="form_sig" onSubmit={Submit}>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="text"
-              name="email"
-              className="form-control"
-              id="email"
-              placeholder="email@example.com"
-              value={email}
-              ref={input_ele["email"]}
-              onChange={emailCh}
-            ></input>
-            <div id="error_email" className="invalid-feedback">
-              <p>check your Email</p>
+      <div className="sub_root">
+        <div className="main">
+          <form className="form_sig" onSubmit={Submit}>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="text"
+                name="email"
+                className="form-control"
+                id="email"
+                placeholder="email@example.com"
+                value={email}
+                ref={input_ele["email"]}
+                onChange={emailCh}
+              ></input>
+              <div id="error_email" className="invalid-feedback">
+                <p>check your Email</p>
+              </div>
             </div>
-          </div>
 
-          <div className="form-group">
-            <label htmlFor="pass">password</label>
-            <input
-              type="password"
-              name="pass"
-              className="form-control"
-              id="pass"
-              placeholder="*******"
-              value={pass}
-              ref={input_ele["pass"]}
-              onChange={passCh}
-            ></input>
-            <div id="error_pass" className="invalid-feedback">
-              <p>check your password</p>
+            <div className="form-group">
+              <label htmlFor="pass">password</label>
+              <input
+                type="password"
+                name="password"
+                className="form-control"
+                id="pass"
+                placeholder="*******"
+                value={pass}
+                ref={input_ele["password"]}
+                onChange={passCh}
+              ></input>
+              <div id="error_pass" className="invalid-feedback">
+                <p>check your password</p>
+              </div>
             </div>
-          </div>
 
-          <div className="other">
-            <button
-              id="posts"
-              type="submit"
-              value="submit"
-              className="btn btn-success"
-            >
-              {" "}
-              Log In
-            </button>
-            <Link to="/signIn" className="btn btn btn-primary">
-              Sign Up
-            </Link>
-          </div>
-        </form>
+            <div className="other">
+              <button
+                id="posts"
+                type="submit"
+                value="submit"
+                className="btn btn-success"
+              >
+                {" "}
+                Log In
+              </button>
+              <Link to="/signIn" className="btn btn btn-primary">
+                Sign Up
+              </Link>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

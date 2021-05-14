@@ -9,9 +9,9 @@ import Body from "./home/body";
 function Root() {
   return (
     <BrowserRouter>
-      <Route exact path="/login" component={logIn} />
+      <Route path="/login" component={logIn} />
       <Route exact path="/signin" component={signIn} />
-      <Route exact path="/" component={Body} />
+      <Route exact path="/home" component={Body} />
     </BrowserRouter>
   );
 }

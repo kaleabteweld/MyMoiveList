@@ -11,8 +11,9 @@ module.exports = function (req, res, next) {
       req.palyload = { id: palyload.id };
       next();
     } catch (error) {
-      res.status(422).send({ error: error });
-      throw { error: error, error_type: "jsonwebtoken" };
+      res.status(422).send({ error: error, error_type: "JsonWebToken" });
+
+      next({ error: error, error_type: "mongoDB" });
     }
   }
 };

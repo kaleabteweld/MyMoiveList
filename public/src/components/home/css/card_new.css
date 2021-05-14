@@ -1,0 +1,133 @@
+.new_c .Card {
+  height: 100%;
+  width: 300px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  position: relative;
+}
+.new_c .Card .bg {
+  height: 100%;
+  width: 100%;
+
+  border-radius: 13px;
+}
+.new_c .Card .mask {
+  height: 31%;
+  width: 100%;
+  border-radius: 0px 0px 13px 13px;
+  position: absolute;
+  top: 69%;
+  left: 0;
+
+  overflow-y: scroll;
+
+  background-color: rgba(1, 1, 1, 0.7);
+  display: flex;
+  flex-direction: column;
+}
+.new_c .Card .mask::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent !important;
+}
+.new_c .Card .mask::-webkit-scrollbar-thumb {
+  background-color: #00ff03 !important;
+  border-radius: 11rem;
+  height: 10px !important;
+}
+.new_c .Card .mask::-webkit-scrollbar-corner {
+  display: none !important;
+}
+.new_c .Card .mask .title {
+  color: white;
+  font-size: 46px;
+
+  text-align-last: center;
+
+  height: fit-content;
+  width: 100%;
+  margin-top: 36px;
+  margin-bottom: 22px;
+}
+.new_c .Card .more {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 0;
+  position: absolute;
+  top: 63%;
+  left: 46%;
+  z-index: 1;
+  background-color: #ff00fc;
+  transition: transform 0.3s ease-in-out;
+}
+.new_c .Card .more > img {
+  height: 25px;
+  width: 25px;
+}
+
+.new_c .Card .mask .tag {
+  display: flex;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: scroll;
+  min-height: 11%;
+  margin-bottom: 11px;
+}
+
+.new_c .Card .mask .tag::-webkit-scrollbar {
+  border-radius: 11rem;
+  height: 8px !important;
+}
+.new_c .Card .mask .tag button {
+  background: transparent;
+  border: 2px solid;
+  color: #007dff;
+  border-radius: 11rem;
+  margin-left: 10px;
+  margin-bottom: 7px;
+}
+
+.new_c .Card .mask .des p {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  color: wheat;
+  text-align: center;
+}
+.new_c .Card .mask .la {
+  display: flex;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: scroll;
+  min-height: 13%;
+  margin-bottom: 21px;
+  margin-top: 11px;
+  overflow-x: scroll;
+}
+.new_c .Card .mask .la::-webkit-scrollbar {
+  border-radius: 11rem;
+  height: 8px !important;
+}
+.new_c .Card .mask .la button {
+  background: transparent;
+  border: 2px solid;
+  color: #007dff;
+  border-radius: 11rem;
+  margin-bottom: 7px;
+  height: 30px;
+  margin: auto;
+  margin-left: 10px;
+}
+.new_c .Card .mask .na {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.new_c .Card .mask .na img {
+  height: 31px;
+  width: 31px;
+}

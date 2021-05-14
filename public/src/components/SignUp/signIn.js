@@ -126,94 +126,96 @@ function SignIn() {
     return <Redirect to="/" />;
   } else {
     return (
-      <div className="main_s">
-        <form className="form_sig" onSubmit={Submit}>
-          <div className="T">
-            <div className="form-group">
-              <label for="name">your full Name</label>
-              <input
-                type="text"
-                className="form-control"
-                id="name"
-                name="name"
-                placeholder="name"
-                value={inputname}
-                onChange={Input}
-                ref={input_ele["name"]}
-              ></input>
-              <div id="email_id" className="invalid-feedback">
-                <p>Enter your Name</p>
+      <div className="sub_root">
+        <div className="main_s">
+          <form className="form_sig" onSubmit={Submit}>
+            <div className="T">
+              <div className="form-group">
+                <label for="name">your full Name</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="name"
+                  value={inputname}
+                  onChange={Input}
+                  ref={input_ele["name"]}
+                ></input>
+                <div id="email_id" className="invalid-feedback">
+                  <p>Enter your Name</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="T">
-            <div className="form-group">
-              <label for="us_name">your user name</label>
-              <input
-                type="text"
-                className="form-control"
-                id="us_name"
-                name="us_name"
-                placeholder="user name"
-                value={inputus_name}
-                onChange={Input}
-                ref={input_ele["user_name"]}
-              ></input>
-              <div id="email_id" className="invalid-feedback">
-                <p>Enter your Name</p>
+            <div className="T">
+              <div className="form-group">
+                <label for="us_name">your user name</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="us_name"
+                  name="us_name"
+                  placeholder="user name"
+                  value={inputus_name}
+                  onChange={Input}
+                  ref={input_ele["user_name"]}
+                ></input>
+                <div id="email_id" className="invalid-feedback">
+                  <p>Enter your Name</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="T">
-            <div className="form-group">
-              <label for="emaill">Email</label>
-              <input
-                type="text"
-                className="form-control"
-                id="emaill"
-                name="email"
-                placeholder="email@example.com"
-                value={inputemail}
-                onChange={Input}
-                ref={input_ele["email"]}
-              ></input>
-              <div className="invalid-feedback" id="error_email">
-                <p>check your Email</p>
+            <div className="T">
+              <div className="form-group">
+                <label for="emaill">Email</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="emaill"
+                  name="email"
+                  placeholder="email@example.com"
+                  value={inputemail}
+                  onChange={Input}
+                  ref={input_ele["email"]}
+                ></input>
+                <div className="invalid-feedback" id="error_email">
+                  <p>check your Email</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="form-group">
-            <label for="passs">password</label>
-            <input
-              type="password"
-              className="form-control"
-              id="passs"
-              name="password"
-              placeholder="*******"
-              value={inputpass}
-              onChange={Input}
-              ref={input_ele["password"]}
-            ></input>
-            <div className="invalid-feedback" id="error_pass">
-              <p>
-                check your password, Must Be less Than Or Equal 8 Charcter's
-              </p>
+            <div className="form-group">
+              <label for="passs">password</label>
+              <input
+                type="password"
+                className="form-control"
+                id="passs"
+                name="password"
+                placeholder="*******"
+                value={inputpass}
+                onChange={Input}
+                ref={input_ele["password"]}
+              ></input>
+              <div className="invalid-feedback" id="error_pass">
+                <p>
+                  check your password, Must Be less Than Or Equal 8 Charcter's
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div className="other">
-            <button
-              id="posts"
-              type="submit"
-              value="submit"
-              className="btn btn-success"
-            >
-              {" "}
-              sign In
-            </button>
-          </div>
-        </form>
+            <div className="other">
+              <button
+                id="posts"
+                type="submit"
+                value="submit"
+                className="btn btn-success"
+              >
+                {" "}
+                sign In
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

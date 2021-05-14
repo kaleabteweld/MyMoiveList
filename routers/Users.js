@@ -97,7 +97,7 @@ Router.post("/logIn", async (req, res, next) => {
 
   // check hash password
   try {
-    const check = await bcrypt.compare(body.pass, Data.pass);
+    const check = await bcrypt.compare(data.password, data_find.password);
     if (!check) {
       res.status(422).send({
         error_type: "user",

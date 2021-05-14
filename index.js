@@ -5,6 +5,7 @@ const cors = require("cors");
 
 // components(routers)
 const Users = require("./routers/Users");
+const Users_me = require("./routers/Users_me");
 
 const error_root = require("./errors/root_error");
 
@@ -20,6 +21,12 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use("/api/Users/", Users);
+app.use("/api/Users/me/", Users_me);
+
+//remove useless shit
+// app.use((req, res, next) => {
+//   res.palyload.id = undefined;
+// });
 
 //error's
 app.use(error_root);

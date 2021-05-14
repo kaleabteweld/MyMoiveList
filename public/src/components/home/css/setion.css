@@ -1,0 +1,27 @@
+.new_c {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+  .new_c > div.name {
+    width: 90% !important;
+  }
+}
+.new_c > div.name {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 45%;
+  height: 51px;
+  background-color: #da8a27;
+  border-radius: 0rem 11rem 11rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.new_c > div.name > p {
+  margin: 0;
+  color: white;
+  font-size: 24px;
+}

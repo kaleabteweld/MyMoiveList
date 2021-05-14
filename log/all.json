@@ -19,3 +19,21 @@
 {"message":{"error":{"driver":true,"name":"MongoError","index":0,"code":11000,"keyPattern":{"email":1},"keyValue":{"email":"kolo@gmail.com"}},"error_type":"mongoDB"},"level":"error","service":"user-service"}
 {"message":{"error":{"driver":true,"name":"MongoError","index":0,"code":11000,"keyPattern":{"email":1},"keyValue":{"email":"kolo@gmail.com"}},"error_type":"mongoDB"},"level":"error","service":"user-service"}
 {"message":{"error":{},"error_type":"mongoDB"},"level":"error","service":"user-service"}
+{"message":{"error":{},"error_type":"bcrypt"},"level":"error","service":"user-service"}
+{"message":{"error":{},"error_type":"bcrypt"},"level":"error","service":"user-service"}
+{"message":{"error":{},"error_type":"bcrypt"},"level":"error","service":"user-service"}
+{"message":{"error":{"code":"ERR_HTTP_HEADERS_SENT"},"error_type":"jwt"},"level":"error","service":"user-service"}
+{"message":{"error":{},"error_type":"bcrypt"},"level":"error","service":"user-service"}
+{"message":{"error":{},"error_type":"bcrypt"},"level":"error","service":"user-service"}
+{"message":{"error":{},"error_type":"bcrypt"},"level":"error","service":"user-service"}
+{"message":{"error":{},"error_type":"bcrypt"},"level":"error","service":"user-service"}
+{"message":{"error":{},"error_type":"bcrypt"},"level":"error","service":"user-service"}
+{"message":{"error":{},"error_type":"bcrypt"},"level":"error","service":"user-service"}
+{"message":{"error":{},"error_type":"mongoDB"},"level":"error","service":"user-service"}
+{"message":{"error":{},"error_type":"mongoDB"},"level":"error","service":"user-service"}
+{"message":{"error":{},"error_type":"mongoDB"},"level":"error","service":"user-service"}
+{"message":{"error":{},"error_type":"mongoDB"},"level":"error","service":"user-service"}
+{"message":{"error":{"name":"JsonWebTokenError","message":"invalid signature"},"error_type":"mongoDB"},"level":"error","service":"user-service"}
+{"level":"error","service":"user-service"}
+{"level":"error","service":"user-service"}
+{"message":{"error":{"name":"JsonWebTokenError","message":"invalid signature"},"error_type":"mongoDB"},"level":"error","service":"user-service"}
